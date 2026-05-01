@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import { BillContext } from "../Context/BillContext";
-import NumbertoWords from "../Components/NumbertoWords";
+import NumberToWords from "../Components/NumberToWords";
 import { toast } from "react-toastify";
 
 const BillViewer = () => {
@@ -261,7 +261,7 @@ const BillViewer = () => {
 
       <div className="border border-t-0 p-2 font-medium">
         <p>Amounts Chargeable (in words) INR</p>
-        <NumbertoWords number={Number(bill.grandTotal) || 0} />
+        <NumberToWords number={Number(bill.grandTotal) || 0} />
       </div>
 
       {bill.gst && (
@@ -303,7 +303,7 @@ const BillViewer = () => {
               <tr>
                 <td colSpan={7} className="font-medium p-2">
                   <p>Tax Amount (in words)</p>
-                  <NumbertoWords number={Number(bill.gstAmount) || 0} />
+                  <NumberToWords number={Number(bill.gstAmount) || 0} />
                 </td>
               </tr>
             </tfoot>
